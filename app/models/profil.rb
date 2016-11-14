@@ -5,4 +5,5 @@ class Profil < ApplicationRecord
   validates :address, presence: true
   validates :country, presence: true
   validates :city, prsence: true
+
 end
