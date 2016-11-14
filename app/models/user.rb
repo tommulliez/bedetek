@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  belongs_to :profil
+  has_one :profil
 end
