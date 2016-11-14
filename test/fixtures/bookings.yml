@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  end_time: 2016-11-14 15:55:43
+  start_time: 2016-11-14 15:55:43
+  comic: one
+  user: one
+
+two:
+  end_time: 2016-11-14 15:55:43
+  start_time: 2016-11-14 15:55:43
+  comic: two
+  user: two

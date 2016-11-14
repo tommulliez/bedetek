@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114143946) do
+ActiveRecord::Schema.define(version: 20161114145632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "end_time"
+    t.datetime "start_time"
+    t.integer  "comic_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comic_id"], name: "index_bookings_on_comic_id", using: :btree
+    t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  end
+
+  create_table "comic_reviews", force: :cascade do |t|
+    t.string   "comment"
+    t.integer  "comic_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comic_id"], name: "index_comic_reviews_on_comic_id", using: :btree
+    t.index ["user_id"], name: "index_comic_reviews_on_user_id", using: :btree
+  end
 
   create_table "comics", force: :cascade do |t|
     t.string   "title"
@@ -31,6 +52,14 @@ ActiveRecord::Schema.define(version: 20161114143946) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_comics_on_user_id", using: :btree
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.boolean  "payed"
+    t.integer  "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_orders_on_booking_id", using: :btree
   end
 
   create_table "profils", force: :cascade do |t|
@@ -55,6 +84,11 @@ ActiveRecord::Schema.define(version: 20161114143946) do
     t.index ["profil_id"], name: "index_users_on_profil_id", using: :btree
   end
 
+  add_foreign_key "bookings", "comics"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "comic_reviews", "comics"
+  add_foreign_key "comic_reviews", "users"
   add_foreign_key "comics", "users"
+  add_foreign_key "orders", "bookings"
   add_foreign_key "users", "profils"
 end
