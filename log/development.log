@@ -1282,3 +1282,870 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 592ms (Views: 575.2ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/" for ::1 at 2016-11-14 21:00:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (20.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (uninitialized constant ComicssController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered collection of /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (13.2ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.9ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.0ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.8ms)
+Started GET "/" for ::1 at 2016-11-14 21:02:14 +0100
+  
+ActionController::RoutingError (uninitialized constant ComicssController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (5.7ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.7ms)
+Started GET "/" for ::1 at 2016-11-14 21:02:35 +0100
+Processing by ComicsController#index as HTML
+  Rendering comics/index.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (5201.1ms)
+  [1m[36mComic Load (20.4ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  Rendered comics/index.html.erb within layouts/application (5228.0ms)
+Completed 200 OK in 5371ms (Views: 5336.8ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/comics" for ::1 at 2016-11-14 21:02:52 +0100
+Processing by ComicsController#index as HTML
+  Rendering comics/index.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (2.3ms)
+  [1m[36mComic Load (1.2ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  Rendered comics/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/comics" for ::1 at 2016-11-14 21:32:16 +0100
+Processing by ComicsController#index as HTML
+  Rendering comics/index.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (2.8ms)
+  [1m[36mComic Load (0.3ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  Rendered comics/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 3664ms (Views: 3657.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 21:32:25 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/new.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 17.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial comics/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/arnaudlongueval/code/Laveugnol/bedetek/app/views"
+  * "/usr/local/Cellar/rbenv/1.0.0/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-4.2.0/app/views"
+):
+    1: <%= render 'form' %>
+  
+app/views/comics/new.html.erb:1:in `_app_views_comics_new_html_erb__1441763115670895113_70276427925620'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.4ms)
+Started GET "/comics/new" for ::1 at 2016-11-14 21:34:29 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (68.3ms)
+  Rendered comics/new.html.erb within layouts/application (69.7ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `photo_cache' for #<Comic:0x007fd504340a40>
+Did you mean?  photo_change):
+    16:           <%= f.input :genre ,label: 'What is the genre'%>
+    17:           <%= f.input :state ,label: 'Good shape?'%>
+    18:           <%= f.input :photo ,label: 'Kesako'%>
+    19:           <%= f.input :photo_cache, as: :hidden %>
+    20:           <%= f.submit "Create a cocktail", class: "btn-yours2" %>
+    21:           <% end %>
+    22: 
+  
+app/views/comics/_form.html.erb:19:in `block in _app_views_comics__form_html_erb__2838988418921654_70276437690640'
+app/views/comics/_form.html.erb:11:in `_app_views_comics__form_html_erb__2838988418921654_70276437690640'
+app/views/comics/new.html.erb:1:in `_app_views_comics_new_html_erb__1441763115670895113_70276437662020'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.9ms)
+Started GET "/comics/new" for ::1 at 2016-11-14 21:40:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (56.0ms)
+  Rendered comics/new.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 517ms (Views: 472.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 21:41:04 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (26.3ms)
+  Rendered comics/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 21:42:56 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (8.8ms)
+  Rendered comics/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 21:43:04 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (11.6ms)
+  Rendered comics/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 21:43:24 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (12.4ms)
+  Rendered comics/new.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 933ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$vert_sympa_clair".):
+    4:     <title>BEDETEK</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <meta name="viewport" content="width=device-width, initial-scale=1">
+   10:     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+app/assets/stylesheets/components/_buttons.scss:33
+app/assets/stylesheets/components/_index.scss:4
+app/assets/stylesheets/application.scss:13
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3321113000436504782_70259852051440'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.1ms)
+Started GET "/comics/new" for ::1 at 2016-11-14 21:44:54 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (12.5ms)
+  Rendered comics/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 4593ms (Views: 4591.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 21:47:13 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"klQu5sODL/NMGWSWT3KUvsZLnVh6LyeL7ARPQfkFKuywbhxh+ox0FBuRl+EZvCsAr6SomH0ydhIqG5HtkscUGA==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"4", "genre"=>"adventure", "state"=>"good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fcd4c4f60c0 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-3639-ev4paf.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>""}, "commit"=>"Add it"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (9.8ms)
+  Rendered comics/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 83ms (Views: 65.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 21:47:33 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3abccuJKKz9FN1Pns8RW+zniyPI+Jdmk8+h18R2k7tH/nO7120Vw2BK/oJDlCulFUA39Mjk4iD0196tddmbQJQ==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"4", "genre"=>"adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fcd44769940 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-3639-129m16a.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>"1479156433-3639-0001-2472/Capture_d_e_cran_2016-11-14_a__14.10.31.png"}, "commit"=>"Add it"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (9.9ms)
+  Rendered comics/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 69ms (Views: 63.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 21:47:46 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW7iowmoyWjsfvvFCtKh6kiXBUCy+CQ9Bg/gmu++NAm/VNAkMKeSj7v2CLJcHB5UIXgwgLXldaTAED42hHwK/Q==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"4", "genre"=>"adventure", "state"=>"Good condition", "photo_cache"=>"1479156453-3639-0002-3324/Capture_d_e_cran_2016-11-14_a__14.10.31.png"}, "commit"=>"Add it"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (13.8ms)
+  Rendered comics/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 21:48:15 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZLgDZdVDGXTohFdSWhw4WwQAwnWX5YjRoAbKBc3D7M5GgjHi7ExCk78MpCUM0oflbe/3tZD42UhmGRSppgHSOg==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"4", "genre"=>"adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fcd4dab2008 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-3639-1czp743.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>"1479156453-3639-0002-3324/Capture_d_e_cran_2016-11-14_a__14.10.31.png"}, "commit"=>"Add it"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (9.2ms)
+  Rendered comics/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 89ms (Views: 64.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-14 21:49:30 +0100
+Processing by ComicsController#index as HTML
+  Rendering comics/index.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (1.6ms)
+  [1m[36mComic Load (0.4ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  Rendered comics/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/1" for ::1 at 2016-11-14 21:49:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (6.1ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.2ms)
+Started GET "/comics/1" for ::1 at 2016-11-14 21:50:51 +0100
+Processing by ComicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComic Load (0.2ms)[0m  [1m[34mSELECT  "comics".* FROM "comics" WHERE "comics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comic with 'id'=1):
+  
+app/controllers/comics_controller.rb:45:in `set_comic'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.2ms)
+Started GET "/new" for ::1 at 2016-11-14 21:51:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (5.6ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.6ms)
+Started GET "/comics/new" for ::1 at 2016-11-14 21:51:38 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (12.5ms)
+  Rendered comics/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 70ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 21:52:14 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BkLJbKHyAFDHkJMGkTl1m8/8M6dVCoPWpuQsaL47p20kePvrmP1bt5AYYHHH98olphMGZ1IX0k9g+/LE1fmZmQ==", "comic"=>{"title"=>"lkb;,b ", "editor"=>";,b;, ", "year"=>";, ", "price"=>"3", "genre"=>"Adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fcd4e3f5340 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-3639-uyxvyw.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>""}, "commit"=>"Add it"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (9.5ms)
+  Rendered comics/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 71ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 21:52:21 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2z1G4Er3BPmEqbflCbPQxVmicMghfl2bdr6s6IJ/T2r5B3Rnc/hfHtMhRJJffW97ME1FCCZjDAKwoXJE6b1xng==", "comic"=>{"title"=>"lkb;,b ", "editor"=>";,b;, ", "year"=>";, ", "price"=>"3", "genre"=>"adventure", "state"=>"Good condition", "photo_cache"=>"1479156734-3639-0004-7854/Capture_d_e_cran_2016-11-14_a__14.10.31.png"}, "commit"=>"Add it"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (9.5ms)
+  Rendered comics/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 21:52:33 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rv2t1eWzAlXwcGSSh1qmk10QBBun7e1JWvfEnMCosG2Mx59S3LxZsqf4l+XRlBktNP8x26DwvNCc6Bowq2qOmQ==", "comic"=>{"title"=>"lkb;,b ", "editor"=>";,b;, ", "year"=>";, ", "price"=>"3", "genre"=>"adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fcd4dbb14e0 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-3639-1hhoopk.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>"1479156734-3639-0004-7854/Capture_d_e_cran_2016-11-14_a__14.10.31.png"}, "commit"=>"Add it"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (8.7ms)
+  Rendered comics/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 65ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (20.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (118.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "BEDETEK_development"[0m
+  [1m[35m (115.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "BEDETEK_test"[0m
+  [1m[35m (311.8ms)[0m  [1m[35mCREATE DATABASE "BEDETEK_development" ENCODING = 'unicode'[0m
+  [1m[35m (239.6ms)[0m  [1m[35mCREATE DATABASE "BEDETEK_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" serial primary key, "end_time" timestamp, "start_time" timestamp, "comic_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_bookings_on_comic_id" ON "bookings" USING btree ("comic_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_bookings_on_user_id" ON "bookings" USING btree ("user_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "comic_reviews" ("id" serial primary key, "comment" character varying, "comic_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_comic_reviews_on_comic_id" ON "comic_reviews" USING btree ("comic_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_comic_reviews_on_user_id" ON "comic_reviews" USING btree ("user_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "comics" ("id" serial primary key, "title" character varying, "editor" character varying, "artist" character varying, "year" character varying, "price" integer, "photo" character varying, "genre" character varying, "description" character varying, "tags" character varying, "state" character varying, "availability" boolean, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_comics_on_user_id" ON "comics" USING btree ("user_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" serial primary key, "payed" boolean, "booking_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_booking_id" ON "orders" USING btree ("booking_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "profils" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "address" character varying, "phone_number" character varying, "avatar" character varying, "city" character varying, "country" character varying, "preferences" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "profil_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_profil_id" ON "users" USING btree ("profil_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_fae6694168"
+FOREIGN KEY ("comic_id")
+  REFERENCES "comics" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "comic_reviews" ADD CONSTRAINT "fk_rails_d8fd85d729"
+FOREIGN KEY ("comic_id")
+  REFERENCES "comics" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "comic_reviews" ADD CONSTRAINT "fk_rails_9742eb4301"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "comics" ADD CONSTRAINT "fk_rails_08785fd51d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "orders" ADD CONSTRAINT "fk_rails_84bf668fc0"
+FOREIGN KEY ("booking_id")
+  REFERENCES "bookings" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161114145632')[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20161114140102'), ('20161114140104'), ('20161114143946'), ('20161114144353'), ('20161114145543');
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-14 20:59:40 UTC], ["updated_at", 2016-11-14 20:59:40 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" serial primary key, "end_time" timestamp, "start_time" timestamp, "comic_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_bookings_on_comic_id" ON "bookings" USING btree ("comic_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_bookings_on_user_id" ON "bookings" USING btree ("user_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "comic_reviews" ("id" serial primary key, "comment" character varying, "comic_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_comic_reviews_on_comic_id" ON "comic_reviews" USING btree ("comic_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_comic_reviews_on_user_id" ON "comic_reviews" USING btree ("user_id")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "comics" ("id" serial primary key, "title" character varying, "editor" character varying, "artist" character varying, "year" character varying, "price" integer, "photo" character varying, "genre" character varying, "description" character varying, "tags" character varying, "state" character varying, "availability" boolean, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_comics_on_user_id" ON "comics" USING btree ("user_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "orders" ("id" serial primary key, "payed" boolean, "booking_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_booking_id" ON "orders" USING btree ("booking_id")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "profils" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "address" character varying, "phone_number" character varying, "avatar" character varying, "city" character varying, "country" character varying, "preferences" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "profil_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_profil_id" ON "users" USING btree ("profil_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_fae6694168"
+FOREIGN KEY ("comic_id")
+  REFERENCES "comics" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "comic_reviews" ADD CONSTRAINT "fk_rails_d8fd85d729"
+FOREIGN KEY ("comic_id")
+  REFERENCES "comics" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "comic_reviews" ADD CONSTRAINT "fk_rails_9742eb4301"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "comics" ADD CONSTRAINT "fk_rails_08785fd51d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "orders" ADD CONSTRAINT "fk_rails_84bf668fc0"
+FOREIGN KEY ("booking_id")
+  REFERENCES "bookings" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161114145632')[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20161114140102'), ('20161114140104'), ('20161114143946'), ('20161114144353'), ('20161114145543');
+
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-14 20:59:40 UTC], ["updated_at", 2016-11-14 20:59:40 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/comics" for ::1 at 2016-11-14 21:59:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComicsController#index as HTML
+  Rendering comics/index.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (274.3ms)
+  [1m[36mComic Load (0.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  Rendered comics/index.html.erb within layouts/application (283.1ms)
+Completed 200 OK in 446ms (Views: 417.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 21:59:58 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (58.3ms)
+  Rendered comics/new.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 157ms (Views: 141.0ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 22:00:25 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NtD84wWBXfi9wvRrpBZn6ArPdmMmTsH3fsBpqKmtQngU6s5kPI4GH+pKBxzy2NhWYyBDoyFTkG6437cEwm98jA==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"2", "genre"=>"adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fa2d06d4758 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-4382-1pmzk18.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>""}, "commit"=>"Add it"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (20.3ms)
+  Rendered comics/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 105ms (Views: 84.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comics" for ::1 at 2016-11-14 22:04:17 +0100
+Processing by ComicsController#index as HTML
+  Rendering comics/index.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (1.5ms)
+  [1m[36mComic Load (0.2ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  Rendered comics/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 66ms (Views: 54.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 22:04:23 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (10.0ms)
+  Rendered comics/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 77ms (Views: 63.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 22:04:58 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cJlqL6L9c8+8i481EXmCPFce3j0KGfYVu7ZQdAuo12JSo1iom/IoKOsDfEJHtz2CPvHr/Q0Ep4x9qY7YYGrplg==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"3", "genre"=>"adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fa2d4caa818 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-4382-mx1nlm.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>""}, "commit"=>"Add it"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comics", :id=>nil} missing required keys: [:id]):
+  
+app/controllers/comics_controller.rb:20:in `create'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.6ms)
+Started POST "/comics" for ::1 at 2016-11-14 22:07:33 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cJlqL6L9c8+8i481EXmCPFce3j0KGfYVu7ZQdAuo12JSo1iom/IoKOsDfEJHtz2CPvHr/Q0Ep4x9qY7YYGrplg==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"3", "genre"=>"adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fa2cbe8b640 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-4382-1yc0nsl.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>""}, "commit"=>"Add it"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comics", :id=>nil} missing required keys: [:id]):
+  
+app/controllers/comics_controller.rb:20:in `create'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.1ms)
+Started PUT "/__web_console/repl_sessions/58e9331eb432e3e1b2c52a8905959e9d" for ::1 at 2016-11-14 22:07:59 +0100
+Started PUT "/__web_console/repl_sessions/58e9331eb432e3e1b2c52a8905959e9d" for ::1 at 2016-11-14 22:08:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (116.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "BEDETEK_development"[0m
+  [1m[35m (116.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "BEDETEK_test"[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6397087599476245560);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20161114140102)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "profil_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_profil_id" ON "users"  ("profil_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161114140102"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProfils (20161114140104)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "profils" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "address" character varying, "phone_number" character varying, "avatar" character varying, "city" character varying, "country" character varying, "preferences" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161114140104"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComics (20161114143946)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "comics" ("id" serial primary key, "title" character varying, "editor" character varying, "artist" character varying, "year" character varying, "price" integer, "photo" character varying, "genre" character varying, "description" character varying, "tags" character varying, "state" character varying, "availability" boolean, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_08785fd51d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_comics_on_user_id" ON "comics"  ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161114143946"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComicReviews (20161114144353)
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "comic_reviews" ("id" serial primary key, "comment" character varying, "comic_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_d8fd85d729"
+FOREIGN KEY ("comic_id")
+  REFERENCES "comics" ("id")
+, CONSTRAINT "fk_rails_9742eb4301"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_comic_reviews_on_comic_id" ON "comic_reviews"  ("comic_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_comic_reviews_on_user_id" ON "comic_reviews"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161114144353"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookings (20161114145543)
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" serial primary key, "end_time" timestamp, "start_time" timestamp, "comic_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_fae6694168"
+FOREIGN KEY ("comic_id")
+  REFERENCES "comics" ("id")
+, CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE  INDEX  "index_bookings_on_comic_id" ON "bookings"  ("comic_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_bookings_on_user_id" ON "bookings"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161114145543"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20161114145632)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" serial primary key, "payed" boolean, "booking_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_84bf668fc0"
+FOREIGN KEY ("booking_id")
+  REFERENCES "bookings" ("id")
+)[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_booking_id" ON "orders"  ("booking_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161114145632"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-14 21:09:30 UTC], ["updated_at", 2016-11-14 21:09:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6397087599476245560)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bookings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comic_reviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comics'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'profils'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/comics" for ::1 at 2016-11-14 22:09:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComicsController#index as HTML
+  Rendering comics/index.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (220.4ms)
+  [1m[36mComic Load (1.1ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  Rendered comics/index.html.erb within layouts/application (229.1ms)
+Completed 200 OK in 430ms (Views: 397.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/comics/new" for ::1 at 2016-11-14 22:09:47 +0100
+Processing by ComicsController#new as HTML
+  Rendering comics/new.html.erb within layouts/application
+  Rendered comics/_form.html.erb (76.1ms)
+  Rendered comics/new.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 145ms (Views: 129.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/comics" for ::1 at 2016-11-14 22:10:12 +0100
+Processing by ComicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3NhWy5ykCUPRLTT915SPZqFC+kfD82m8pV4GyuDtR1b+4mRMpatSpIalx4qBWjDYyK3Ph8TuOCVjQdhmiy95og==", "comic"=>{"title"=>"Tintin au wagon", "editor"=>"Dargot", "year"=>"2016", "price"=>"2", "genre"=>"adventure", "state"=>"Good condition", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007f948f2f3cc8 @tempfile=#<Tempfile:/var/folders/t2/d90rypf14kggx5nln_49rg900000gn/T/RackMultipart20161114-4818-wl2xc8.png>, @original_filename="Capture d’écran 2016-11-14 à 14.10.31.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"comic[photo]\"; filename=\"Capture d\xE2\x80\x99e\xCC\x81cran 2016-11-14 a\xCC\x80 14.10.31.png\"\r\nContent-Type: image/png\r\n">, "photo_cache"=>""}, "commit"=>"Add it"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"comics", :id=>nil} missing required keys: [:id]):
+  
+app/controllers/comics_controller.rb:20:in `create'
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/opt/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.2ms)

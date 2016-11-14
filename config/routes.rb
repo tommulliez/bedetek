@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
-  get 'comics/index'
+  # get 'comics/index'
 
-  get 'comics/show'
+  # get 'comics/show'
 
-  get 'comics/new'
+  # get 'comics/new'
 
-  get 'comics/create'
+  # get 'comics/create'
 
-  get 'comics/edit'
+  # get 'comics/edit'
 
-  get 'comics/update'
+  # get 'comics/update'
 
-  get 'comics/detroy'
+  # get 'comics/detroy'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :comics
+
+  root 'comics#index'
 end
