@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-     @booking = Booking.new(booking_params)
+     @booking = @comic.booking.build(booking_params)
     if @booking.save
       redirect_to profile_path(@profile)
     else
