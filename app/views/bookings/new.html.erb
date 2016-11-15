@@ -5,13 +5,9 @@
 
       <div class="form-login" id="centerbuttons">
       <h3 class="text-center">Book this Comic</h3>
-
-
           <%= @comic.title %>
           <%= cl_image_tag @comic.photo, height: 300, width: 400, crop: :fill %>
           <%= render 'form', booking: @booking %>
-
-
         </div>
 
       </div>
