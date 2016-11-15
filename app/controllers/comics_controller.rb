@@ -9,6 +9,7 @@ class ComicsController < ApplicationController
   def show
     @comic = Comic.find(params[:id])
     @comic_review = ComicReview.new
+
   end
 
   def new
@@ -17,7 +18,8 @@ class ComicsController < ApplicationController
 
   def create
     @comic = Comic.new(comic_params)
-    @comic.user_id = current_user.id if current_user
+    @comic.user = current_user if current_user
+
 
     if @comic.save
 
@@ -38,7 +40,7 @@ class ComicsController < ApplicationController
     end
   end
 
-  def detroy
+  def destroy
     @comic.destroy
     redirect_to comics_path
   end

@@ -13,10 +13,8 @@
           <%= f.input :address, label: 'Where do you live?'%>
           <%= f.input :city, label: 'Moulinsart?'%>
 
-          <% if !current_user.facebook_picture_url? %>
-          <%= f.input :photo, label: 'Blaz'%>
-          <%= f.input :photo_cache, as: :hidden %>
-          <%end%>
+
+
 
           <%= f.submit "Add it", class: "btn-yours2" %>
           <% end %>

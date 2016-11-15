@@ -1,34 +1,19 @@
 Rails.application.routes.draw do
-  # get 'profils/new'
 
-  # get 'profils/create'
-
-  # get 'profils/show'
-
-  # get 'profils/edit'
-
-  # get 'profils/update'
-
-  # get 'comics/index'
-
-  # get 'comics/show'
-
-  # get 'comics/new'
-
-  # get 'comics/create'
-
-  # get 'comics/edit'
-
-  # get 'comics/update'
-
-  # get 'comics/detroy'
 
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :comics
-  resources :profils
+
+  resources :comics do
+    resources :bookings, only: [:new]
+  end
+
+
+  resources :profils do
+    resources :bookings, except: [:new]
+
+  end
 
   root 'comics#index'
 end

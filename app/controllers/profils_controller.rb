@@ -6,7 +6,7 @@ class ProfilsController < ApplicationController
 
   def create
     @profil = Profil.new(profil_params)
-    current_user.profil = @profil
+    @profil.user = current_user
     if @profil.save
 
 
@@ -19,6 +19,7 @@ class ProfilsController < ApplicationController
   end
 
   def show
+
   end
 
   def edit
@@ -39,7 +40,7 @@ class ProfilsController < ApplicationController
   end
 
   def profil_params
-    params.require(:profil).permit(:first_name, :last_name, :address, :country, :city, :photo, :photo_cache)
+    params.require(:profil).permit(:first_name, :last_name, :address, :city)
   end
 
 end
