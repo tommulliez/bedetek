@@ -1,0 +1,31 @@
+<% content_for(:first_name) do %>
+<%= @profil.first_name %>
+<% end %>
+
+
+
+<div class="wrapper ">
+  <div class="text-center">
+    <div class="container" >
+      <div class="row ">
+        <div class="col-xs-12 ">
+          <h1 class="adaptation"><%= @profil.first_name + '' + @profil.last_name %>
+            <%= link_to  edit_profil_path(@profil) do  %>
+            <i class="fa fa-pencil"></i>
+            <%end%>
+          </h1>
+        </div>
+        <div class="col-xs-12">
+          <% if @profil.photo?%>
+          <%= image_tag @profil.photo.url(:standard) %>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+
+
+</div>
