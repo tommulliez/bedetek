@@ -1,0 +1,11 @@
+<h1><%= @comic.title %></h1>
+
+<%= cl_image_tag @comic.photo, height: 300, width: 400, crop: :fill %>
+<tr>
+<p><% @booking.start_time %></p>
+<p><% @booking.end_time %></p>
+<p><%= link_to 'Change date', bookings_edit_path(@booking) %></p>
+<%= link_to 'Cancel this booking', @booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+<p><%= link_to 'Back to profile', profile_path(@profile) %></p>
+

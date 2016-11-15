@@ -1,0 +1,12 @@
+<h1>Change this booking</h1>
+
+<div><%= @comic.title %></div>
+<div><%= cl_image_tag @comic.photo, height: 300, width: 400, crop: :fill %></div>
+
+<h2>Change the date</h2>
+<%= render 'form', booking: @booking %>
+
+<h2>Cancel the booking</h2>
+
+<%= link_to 'Back to profile', profile_path(@profile) %>
+
