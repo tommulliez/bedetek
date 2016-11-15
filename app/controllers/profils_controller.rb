@@ -6,9 +6,11 @@ class ProfilsController < ApplicationController
 
   def create
     @profil = Profil.new(profil_params)
-    @profil.user_id = current_user.id if current_user
-
+    current_user.profil = @profil
     if @profil.save
+
+
+      #on test le truc
 
       redirect_to comics_path
     else
