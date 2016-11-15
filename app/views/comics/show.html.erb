@@ -31,25 +31,5 @@
   <hr>
 
 
-  <hr>
-  <div class="container">
-    <div class="row ">
-      <div class="col-xs-12 col-sm-6" id= "review">
-       <%= simple_form_for [@comic, @comic_review] do |f| %>
-       <%= f.input :comment ,input_html: { class: 'mannequin',id: "contenu" }%>
-       <%= f.submit "How was it??", class: "btn-yours2" %>
-       <% end %>
-     </div>
-     <div class="col-xs-12 col-sm-6 review" >
-       <% if @comic.comic_reviews != []%>
-       <h2>Readers have said:</h2>
-       <ul>
-        <% @comic.comic_reviews.each do |review| %>
-        <li><p><%= review.comment %></p></li>
-        <% end %>
-      </ul>
-      <% end %>
-    </div>
-  </div>
-</div>
+
 </div>

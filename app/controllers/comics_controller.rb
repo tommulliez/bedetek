@@ -1,5 +1,6 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [ :show, :edit, :update, :destroy ]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @comics = Comic.all
@@ -16,7 +17,10 @@ class ComicsController < ApplicationController
 
   def create
     @comic = Comic.new(comic_params)
+    @comic.user_id = current_user.id if current_user
+
     if @comic.save
+
       redirect_to comic_path(@comic)
     else
       render :new
