@@ -19,7 +19,7 @@ class ProfilsController < ApplicationController
   end
 
   def show
-
+    @comics = current_user.comics
   end
 
   def edit
