@@ -13,3 +13,43 @@
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
+
+
+.mannequin{
+  width : 400px;
+}
+
+#centerbuttons {
+  width:250px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.creation{
+
+  background-color: lightgrey;
+  margin-top: 100px;
+  padding-bottom: 10px;
+  width: 800px;
+  border-radius: 15px;
+}
+
+html{
+    height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+
+
+ position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  }
