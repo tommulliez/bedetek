@@ -1,0 +1,28 @@
+
+
+<div class="container creation">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+      <div class="form-login" id="centerbuttons">
+      <h3 class="text-center">Add a comic</h3>
+
+          <%= simple_form_for [@comic] do |f| %>
+          <%= f.input :title ,label: 'which title?'%>
+          <%= f.input :editor ,label: 'From which editor'%>
+          <%= f.input :artist ,label: 'From which artist'%>
+          <%= f.input :year ,label: 'Publishing year'%>
+          <%= f.input :price ,label: 'How much do you want (on a daily basis)'%>
+          <%= f.input :genre ,label: 'What is the genre'%>
+          <%= f.input :state ,label: 'Is it in good shape?'%>
+          <%= f.input :photo ,label: 'Jacquette time'%>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit "Add it", class: "btn-yours2" %>
+          <% end %>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
