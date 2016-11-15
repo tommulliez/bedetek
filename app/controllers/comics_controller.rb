@@ -7,7 +7,7 @@ class ComicsController < ApplicationController
   end
 
   def show
-    @comic = Comic.find(params[:id])
+    set_comic
     @comic_review = ComicReview.new
   end
 

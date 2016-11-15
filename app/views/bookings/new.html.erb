@@ -1,0 +1,9 @@
+<h1>Book this Comic</h1>
+
+<p><%= @comic.title %></p>
+<p><%= cl_image_tag @comic.photo, height: 300, width: 400, crop: :fill %></p>
+
+<%= render 'form', booking: @booking %>
+
+
+

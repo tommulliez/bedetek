@@ -1,0 +1,13 @@
+<h1>All your bookings</h1>
+
+<p> <% @bookings.each do |booking|%></p>
+<p><strong><%= @comic.title %></strong></p>
+<%= cl_image_tag @comic.photo, height: 300, width: 400, crop: :fill %>
+<tr>
+<p><% @booking.start_time %></p>
+<p><% @booking.end_time %></p>
+<p><%= link_to 'Change date', bookings_edit_path(@booking) %></p>
+<%= link_to 'Cancel this booking', @booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
+
+
