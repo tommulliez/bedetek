@@ -67,7 +67,12 @@
   </div>
 
 
-
+ <div>
+   <% current_user.bookings.each do |booking|%>
+   <%= booking.comic.title%>
+   <%= "booking starts at : " + booking.start_time.strftime('%d/%m/%Y %H:%m') + " and stops at: " + booking.end_time.strftime('%d/%m/%Y %H:%m') %>
+   <%end%>
+ </div>
 
 
 

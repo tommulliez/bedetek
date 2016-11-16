@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
 
   resources :comics do
-    resources :bookings, only: [:new]
+    resources :bookings, only: [:new, :create]
   end
 
 

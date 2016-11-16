@@ -9,13 +9,15 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @bookings = Booking.new
+
   end
 
   def create
-     @booking = @comic.booking.build(booking_params)
+    @comic = Comic.find(params[:comic_id])
+     @booking = @comic.bookings.build(booking_params)
+     @booking.user = current_user if current_user
     if @booking.save
-      redirect_to profile_path(@profile)
+      redirect_to profil_path(current_user)
     else
       render :new
     end
