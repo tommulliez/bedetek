@@ -7,10 +7,9 @@
       <div class="form-login" id="centerbuttons">
       <h3 class="text-center">Your profil</h3>
           <%= simple_form_for [@profil] do |f| %>
-            <%= f.input :first_name, label: 'what is your first name?'%>
-            <%= f.input :last_name, label: 'What is your last name?'%>
-            <%= f.input :address, label: 'Where do you live?'%>
-            <%= f.input :city, label: 'Moulinsart?'%>
+            <%= f.input :first_name, label: 'First name?'%>
+            <%= f.input :last_name, label: 'Last name?'%>
+            <%= f.input :address, label: 'Address ?'%>
             <%= f.submit "Add it", class: "btn-yours2" %>
           <% end %>
         </div>
