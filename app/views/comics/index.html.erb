@@ -1,42 +1,27 @@
-<!--
-<<<<<<< HEAD
-<div class="wrapper display-home">
-
- <div class="container text-center padded features">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <%= image_tag "map.png", class: "comic_size" %>
-          <h2>Look around you</h2>
-          <p>Get comics close to you</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <%= image_tag "handshake.png" %>
-          <h2>Borrow a comic</h2>
-          <p>Don't buy them, just rent them!</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <%= image_tag "superhero.png" %>
-          <h2>Read for hours</h2>
-          <p>Enjoy thousands of comics</p>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+    Liste des
+    </div>
+    <div class="col-sm-6">
+      <div id="map" style="width: 600px; height: 700px;"></div>
+        <% content_for(:after_js) do %>
+          <%= javascript_tag do %>
+            $(document).ready(function() {
+              var handler = Gmaps.build('Google');
+              handler.buildMap({ internal: { id: 'map' } }, function() {
+                markers = handler.addMarkers(<%= raw @hash.to_json %>);
+                handler.bounds.extendWith(markers);
+                handler.fitMapToBounds();
+                if (markers.length == 0) {
+                  handler.getMap().setZoom(2);
+                } else if (markers.length == 1) {
+                  handler.getMap().setZoom(14);
+                }
+              });
+            });
+          <% end %>
+        <% end %>
       </div>
   </div>
-
-
-<div class="wrapper wrapper-comic">
-  <div class="container">
-    <h2 class="row text-amazing text-center"><strong>An endless selection</h2></strong>
-    <% @comics.each do |c| %>
-    <div class="col-xs-12 col-sm-4 col-lg-3">
-
-      <%= render "comic", comic: c %>
-
-    </div>
-    <% end %>
-  </div>
 </div>
-
-
-=======
-
->>>>>>> add-map-google -->
