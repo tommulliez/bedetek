@@ -1,1 +1,18 @@
 // Your footer style
+.footer {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  border-top: 1px solid #E8EDF2;
+
+}
+
+.footer-brand img {
+  width: 50px;
+}
+.color-icon{
+  color: #1409C1;
+}
