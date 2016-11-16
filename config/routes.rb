@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
 
-
-
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-
 
   resources :comics do
     resources :bookings, only: [:new, :create]
   end
-
-
 
   resources :profils do
     resources :bookings, except: [:new]
@@ -18,5 +13,5 @@ Rails.application.routes.draw do
   end
 
 
-  root 'comics#index'
+  root 'pages#home'
 end
