@@ -1,10 +1,9 @@
-
 <% if comic.photo? %>
 
 <%= link_to comic do%>
   <div class="card"
   style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-  url('<%= cl_image_path comic.photo, height: 300, width: 400, crop: :fill %>')">
+  url('<%= cl_image_path comic.photo, height: 300, crop: :fill %>')">
   <div class="card-category"><%= comic.title %></div>
   </div>
 <%end%>
