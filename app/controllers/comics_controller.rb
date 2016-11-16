@@ -37,6 +37,7 @@ class ComicsController < ApplicationController
   def edit
   end
 
+
   def update
     if @comic.update(comic_params)
       redirect_to comic_path(@comic)
@@ -57,7 +58,7 @@ class ComicsController < ApplicationController
   end
 
   def comic_params
-    params.require(:comic).permit(:title, :editor, :artist, :price, :genre, :state, :year, :photo, :photo_cache)
+    params.require(:comic).permit(:title, :editor, :artist, :price, :genre, :state, :year, :description, :photo, :photo_cache)
   end
 
 end

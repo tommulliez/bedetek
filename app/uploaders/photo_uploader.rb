@@ -11,6 +11,9 @@ include Cloudinary::CarrierWave
   version :standard do
     resize_to_fit 800, 600
   end
+   version :standardplus do
+    resize_to_fit 800, 600
+  end
 
   version :bright_face do
     cloudinary_transformation effect: "brightness:30", radius: 20,

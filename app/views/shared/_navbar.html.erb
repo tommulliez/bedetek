@@ -16,10 +16,10 @@
     </form>
 
     <!-- Text link -->
-<!--     <a href="" class="navbar-wagon-item navbar-wagon-link">Contact</a> -->
+    <!--     <a href="" class="navbar-wagon-item navbar-wagon-link">Contact</a> -->
 
     <!-- Text link -->
-<!--     <a href="" class="navbar-wagon-item navbar-wagon-link">Team</a> -->
+    <!--     <a href="" class="navbar-wagon-item navbar-wagon-link">Team</a> -->
 
     <!-- Notification link-->
     <a href="" class="navbar-wagon-item navbar-wagon-link">
@@ -38,46 +38,44 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
             <% if current_user.profil == nil %>
-          <%= link_to "Profile", new_profil_path%>
-          <% else%>
-          <%= link_to "Profile", profil_path(current_user.profil)%>
-          <%end%>
+            <%= link_to "Profile", new_profil_path%>
+            <% else%>
+            <%= link_to "Profile", profil_path(current_user.profil)%>
+            <%end%>
           </li>
-          <li><a href="#">My readings</a></li>
-          <li><a href="#">My comics</a></li>
           <li><a href="#">Pending reservations</a></li>
           <li>
-             <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-          </li>
-        </ul>
-      </div>
+           <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+         </li>
+       </ul>
+     </div>
 
-    </div>
-      <% if current_user.profil == nil %>
-        <%= link_to "Add a comic", new_profil_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
-      <% else %>
-        <%= link_to "Add a comic", new_comic_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
-        <% end %>
-    <% else %>
-      <div>
-        <%= link_to "Connexion", user_session_path %>
-        <a href="../users/sign_up">Inscription</a>
-      </div>
-    <% end %>
-
-    <!-- Button (call-to-action) -->
-
+   </div>
+   <% if current_user.profil == nil %>
+   <%= link_to "Add a comic", new_profil_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
+   <% else %>
+   <%= link_to "Add a comic", new_comic_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
+   <% end %>
+   <% else %>
+   <div>
+    <%= link_to "Connexion", user_session_path %>
+    <a href="../users/sign_up">Inscription</a>
   </div>
+  <% end %>
 
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
-    </div>
+  <!-- Button (call-to-action) -->
+
+</div>
+
+<!-- Dropdown appearing on mobile only -->
+<div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="dropdown">
+    <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <li><a href="#">Some mobile link</a></li>
+      <li><a href="#">Other one</a></li>
+      <li><a href="#">Other one</a></li>
+    </ul>
   </div>
+</div>
 </div>
