@@ -53,10 +53,15 @@
       </div>
 
     </div>
-    <%= link_to "Add a comic", new_comic_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
+      <% if current_user.profil == nil %>
+        <%= link_to "Add a comic", new_profil_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
+      <% else %>
+        <%= link_to "Add a comic", new_comic_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
+        <% end %>
     <% else %>
       <div>
-        <%= link_to "Sign in", user_session_path %>
+        <%= link_to "Connexion", user_session_path %>
+        <a href="../users/sign_up">Inscription</a>
       </div>
     <% end %>
 
