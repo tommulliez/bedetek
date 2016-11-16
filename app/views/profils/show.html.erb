@@ -1,83 +1,88 @@
 <% content_for(:first_name) do %>
 <%= @profil.first_name %>
 <% end %>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="wrapper ">
-  <div class="text-center">
-    <div class="container" >
-      <div class="row ">
-        <div class="col-xs-12">
-          <% if @profil.user.facebook_picture_url %>
-          <%= image_tag @profil.user.facebook_picture_url %>
-          <%end%>
-        </div>
-        <div class="col-xs-12 ">
-          <h1 class="adaptation">
-          <%= @profil.first_name + ' ' +@profil.last_name %>
 
-            <%= link_to  edit_profil_path(@profil) do  %>
-            <i class="fa fa-pencil"></i>
-            <%end%>
-          </h1>
-        </div>
-
-      </div>
-    </div>
+<div class="profile-header-wrapper" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path "tintin.png" %>);">
+  <div class="container profile-header-container text-center">
+    <div class="profile-header-infos">
+     <% if @profil.user.facebook_picture_url %>
+     <%= image_tag @profil.user.facebook_picture_url %>
+     <%end%>
+     <h1><%= @profil.first_name %>   <%= @profil.last_name %></h1>
+     <h2><%= @profil.city%></h2>
+   </div>
+   <div class="tabs">
+    <a class="tab active" data-target="#Myprofile">
+      <h3>Profile</h3>
+    </a>
+    <a class="tab" data-target="#Mycomics">
+      <h3>My comics</h3>
+    </a>
+    <a class="tab" data-target="#Myborrowings">
+      <h3>My borrowings</h3>
+    </a>
+    <a class="tab" data-target="#Mylendings">
+      <h3>My lendings</h3>
+    </a>
   </div>
+</div>
+</div>
 
-  <hr>
-
-<div class="wrapper ">
-  <div class="text-center">
-    <div class="container" >
-    <% @comics.each do |comic|%>
-      <div class="row ">
-        <div class="col-xs-12 ">
-          <h1 class="adaptation"><%= comic.title %> <%= link_to comic_path(comic),
+<div class="container text-center">
+  <div class="tab-content" id="Myprofile">
+    <%= render '/profils/form_profil'%>
+  </div>
+  <div class="tab-content hidden" id="Mycomics">
+    <% @current_user.comics.each  do  |comic|%>
+    <div class="product">
+      <%= cl_image_tag comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
+      <div class='product-body'>
+        <h3><%=comic.title%></h3>
+        <p>Genre: <%=comic.genre%> -- Author: <%=comic.artist%></p>
+      </div>
+      <ul class="list-inline product-controls product-controls-hidden hidden-sm hidden-xs">
+        <li><%= link_to  edit_comic_path(comic) do  %>
+          <i class="fa fa-pencil"></i><%end%></li>
+          <li><%= link_to comic_path(comic),
             method: :delete,
             data: { confirm: "Une bédé de Bachibouzouk?" } do%>
-            <i class="fa fa-trash-o"></i>
-            <%end%>
-            <%= link_to  edit_comic_path(comic) do  %>
-            <i class="fa fa-pencil"></i>
-            <%end%>
-          </h1>
+            <i class="fa fa-trash-o"></i><%end%></li>
+          </ul>
         </div>
-        <div class="col-xs-12">
-          <% if comic.photo?%>
-          <%= image_tag comic.photo.url(:standard) %>
-          <%end%>
+        <%end%>
+      </div>
+      <div class="tab-content hidden" id="Myborrowings">
+       <% @current_user.bookings.each  do  |booking|%>
+       <div class="product">
+        <%= cl_image_tag booking.comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
+        <div class='product-body'>
+          <h3><%=booking.comic.title%></h3>
+          <p><%= "booking starts at : " + booking.start_time.strftime('%d/%m/%Y %H:%m') + " and stops at: " + booking.end_time.strftime('%d/%m/%Y %H:%m') %></p>
         </div>
       </div>
       <%end%>
-    </div>
-  </div>
+      <div class="tab-content hidden" id="Mylendings">
 
-
- <div>
-   <% current_user.bookings.each do |booking|%>
-   <%= booking.comic.title%>
-   <%= "booking starts at : " + booking.start_time.strftime('%d/%m/%Y %H:%m') + " and stops at: " + booking.end_time.strftime('%d/%m/%Y %H:%m') %>
-   <%end%>
- </div>
+      </div>
+       </div>
+       </div>
 
 
 
 
 
-
-
-
-</div>
+ <% content_for(:js) do %>
+   <%= javascript_tag do %>
+     $(function(){
+     $(".tab").on("click", function(e){
+     // Change active tab
+     $(".tab").removeClass('active');
+     $(this).addClass('active');
+     // Hide all tab-content (use class="hidden")
+     $(".tab-content").addClass('hidden');
+     // Show target tab-content (use class="hidden")
+     $($(this).data('target')).removeClass('hidden');
+    });
+  });
+  <% end %>
+<% end %>
