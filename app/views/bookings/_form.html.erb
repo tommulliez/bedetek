@@ -1,49 +1,33 @@
-<%= simple_form_for(@booking) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :start_time, :as :datepicker %>
-    <%= f.input :end_time, :as :datepicker %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
 
 <div class="container">
-    <div class='col-md-5'>
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker6'>
-                <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class='col-md-5'>
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker7'>
-                <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
+  <%= form_for [@comic, @booking] do |f| %>
+    <%= f.text_field :start_time, placeholder: "from" %>
+    <%= f.text_field :end_time , placeholder: "to" %>
+    <%= f.submit "Book it now", class: "btn-yours2" %>
+  <% end %>
+
+
+
+
+
+
+
+
 <script type="text/javascript">
     $(function () {
-        $('#datetimepicker6').datetimepicker();
-        $('#datetimepicker7').datetimepicker({
-            useCurrent: false //Important! See issue #1075
+        $('#booking_start_time').datetimepicker({
+          locale: 'fr'
         });
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        $('#booking_end_time').datetimepicker({
+            useCurrent: false,
+            locale: 'fr'
         });
-        $("#datetimepicker7").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        $("#booking_start_time").on("dp.change", function (e) {
+            $('#booking_end_time').data("DateTimePicker").minDate(e.date);
+        });
+        $("#booking_end_time").on("dp.change", function (e) {
+            $('#booking_start_time').data("DateTimePicker").maxDate(e.date);
         });
     });
 </script>

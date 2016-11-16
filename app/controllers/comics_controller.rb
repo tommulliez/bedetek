@@ -7,8 +7,8 @@ class ComicsController < ApplicationController
   end
 
   def show
-    set_comic
-    @comic_review = ComicReview.new
+
+    @booking = Booking.new
 
   end
 
