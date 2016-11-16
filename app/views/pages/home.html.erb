@@ -35,3 +35,17 @@
     <% end %>
   </div>
 </div>
+
+
+
+<div class="container text-center padded features">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <% a = [] %>
+          <% @comics.each do |c| %>
+          <% a << c.photo %>
+          <% end %>
+          <%= carousel_for(a) %>
+        </div>
+    </div>
+</div>
