@@ -23,25 +23,24 @@
     <div class="container" >
       <div class="row ">
         <h1> <%= @comic.title %> </h1>
-          <% if !current_user == nil %>
+          <% if current_user  %>
             <% if current_user.id == @comic.user_id %>
               <div class="col-xs-12 ">
                 <h1 class="adaptation"> <%= link_to comic_path(@comic),
                   method: :delete,
-                  data: { confirm: "Une bédé de Bachibouzouk?" } do%>
-                  <i class="fa fa-trash-o"></i>
+                  data: { confirm: "Une bédé de Bachibouzouk?" } do %>
+                    <i class="fa fa-trash-o"></i>
                   <%end%>
                   <%= link_to  edit_comic_path(@comic) do  %>
-                  <i class="fa fa-pencil"></i>
+                    <i class="fa fa-pencil"></i>
                   <%end%>
                 </h1>
               </div>
+              <% end %>
             <% end %>
-          <% end %>
-
         <div class="col-xs-12">
           <% if @comic.photo?%>
-          <%= image_tag @comic.photo.url(:standard) %>
+            <%= image_tag @comic.photo.url(:standard) %>
           <%end%>
         </div>
       </div>
