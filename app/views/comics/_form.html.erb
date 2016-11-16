@@ -14,8 +14,8 @@
           <%= f.input :artist ,label: 'From which artist'%>
           <%= f.input :year ,label: 'Publishing year'%>
           <%= f.input :price ,label: 'How much do you want (on a daily basis)'%>
-          <%= f.input :genre ,label: 'What is the genre'%>
-          <%= f.input :state ,label: 'Is it in good shape?'%>
+          <%= f.input :genre ,label: 'What is the genre', collection: ["adventure", "aviation", "fantastic", "history", "science-fiction", "western", "thriller", "adult", "manga"]%>
+          <%= f.input :state ,label: 'Is it in good shape?', collection: ["Like it was new", "Average used", "Almost a wreck"]%>
           <%= f.input :photo ,label: 'Jacquette time'%>
           <%= f.input :photo_cache, as: :hidden %>
           <%= f.submit "Add it", class: "btn-yours2" %>
