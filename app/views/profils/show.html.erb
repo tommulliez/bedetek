@@ -1,0 +1,79 @@
+<% content_for(:first_name) do %>
+<%= @profil.first_name %>
+<% end %>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="wrapper ">
+  <div class="text-center">
+    <div class="container" >
+      <div class="row ">
+        <div class="col-xs-12">
+          <% if @profil.user.facebook_picture_url %>
+          <%= image_tag @profil.user.facebook_picture_url %>
+          <%end%>
+        </div>
+        <div class="col-xs-12 ">
+          <h1 class="adaptation">
+          <%= @profil.first_name + ' ' +@profil.last_name %>
+
+            <%= link_to  edit_profil_path(@profil) do  %>
+            <i class="fa fa-pencil"></i>
+            <%end%>
+          </h1>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+<div class="wrapper ">
+  <div class="text-center">
+    <div class="container" >
+    <% @comics.each do |comic|%>
+      <div class="row ">
+        <div class="col-xs-12 ">
+          <h1 class="adaptation"><%= comic.title %> <%= link_to comic_path(comic),
+            method: :delete,
+            data: { confirm: "Une bédé de Bachibouzouk?" } do%>
+            <i class="fa fa-trash-o"></i>
+            <%end%>
+            <%= link_to  edit_comic_path(comic) do  %>
+            <i class="fa fa-pencil"></i>
+            <%end%>
+          </h1>
+        </div>
+        <div class="col-xs-12">
+          <% if comic.photo?%>
+          <%= image_tag comic.photo.url(:standard) %>
+          <%end%>
+        </div>
+      </div>
+      <%end%>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>

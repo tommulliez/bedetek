@@ -36,18 +36,24 @@
         <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
         <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
+          <li>
+            <% if current_user.profil == nil %>
+          <%= link_to "Profile", new_profil_path%>
+          <% else%>
+          <%= link_to "Profile", profil_path(current_user.profil)%>
+          <%end%>
+          </li>
           <li><a href="#">My readings</a></li>
           <li><a href="#">My comics</a></li>
           <li><a href="#">Pending reservations</a></li>
           <li>
-             <%= link_to 'Disconnection', destroy_user_session_path, method: :delete %>
+             <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
           </li>
         </ul>
       </div>
 
     </div>
-    <a href="" class="navbar-wagon-item navbar-wagon-button btn">Add a comic</a>
+    <%= link_to "Add a comic", new_comic_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
     <% else %>
       <div>
         <%= link_to "Sign in", user_session_path %>

@@ -2,3 +2,34 @@ tmp/*
 log/*
 
 /config/application.yml
+
+
+
+
+<div class="wrapper ">
+  <div class="text-center">
+    <div class="container" >
+    <% @profil.comics.each do |comic|%>
+      <div class="row ">
+        <div class="col-xs-12 ">
+          <h1 class="adaptation"><%= comic.title %> <%= link_to comic_path(comic),
+            method: :delete,
+            data: { confirm: "Une bédé de Bachibouzouk?" } do%>
+            <i class="fa fa-trash-o"></i>
+            <%end%>
+            <%= link_to  edit_comic_path(comic) do  %>
+            <i class="fa fa-pencil"></i>
+            <%end%>
+          </h1>
+        </div>
+        <div class="col-xs-12">
+          <% if comic.photo?%>
+          <%= image_tag comic.photo.url(:standard) %>
+          <%end%>
+        </div>
+      </div>
+      <%end%>
+    </div>
+  </div>
+# à mettre dans le show du profil
+>>>>>>> 0ac7b0b62d2cfbfa945face443b2ea5ada7ce8ab
