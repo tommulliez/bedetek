@@ -1,7 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-    Liste des
+      <ul>
+          <% if @profils_list == [] %>
+            <%= "Display image" %>
+          <% end %>
+          <% @profils_list.each do |profil| %>
+            <% profil.user.comics.each do |comic| %>
+            <li><%= comic.title%></li>
+            <%end%>
+          <%end%>
+
+      </ul>
     </div>
     <div class="col-sm-6">
       <div id="map" style="width: 600px; height: 700px;"></div>
@@ -25,3 +35,5 @@
       </div>
   </div>
 </div>
+
+
