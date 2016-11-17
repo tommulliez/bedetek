@@ -6,26 +6,26 @@
   <div class="container profile-header-container text-center">
     <div class="profile-header-infos">
      <% if @profil.user.facebook_picture_url %>
-     <%= image_tag @profil.user.facebook_picture_url %>
+      <%= image_tag @profil.user.facebook_picture_url %>
      <%end%>
      <h1><%= @profil.first_name %>   <%= @profil.last_name %></h1>
      <h2><%= @profil.city%></h2>
-   </div>
-   <div class="tabs">
-    <a class="tab active" data-target="#Myprofile">
+    </div>
+    <div class="tabs">
+      <a class="tab active" data-target="#Myprofile">
       <h3>Profile</h3>
-    </a>
-    <a class="tab" data-target="#Mycomics">
+      </a>
+      <a class="tab" data-target="#Mycomics">
       <h3>My comics</h3>
-    </a>
-    <a class="tab" data-target="#Myborrowings">
+      </a>
+      <a class="tab" data-target="#Myborrowings">
       <h3>My borrowings</h3>
-    </a>
-    <a class="tab" data-target="#Mylendings">
+      </a>
+      <a class="tab" data-target="#Mylendings">
       <h3>My lendings</h3>
-    </a>
+      </a>
+    </div>
   </div>
-</div>
 </div>
 
 <div class="container text-center">
@@ -34,38 +34,80 @@
   </div>
   <div class="tab-content hidden" id="Mycomics">
     <% @current_user.comics.each  do  |comic|%>
-    <div class="product">
-      <%= cl_image_tag comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
-      <div class='product-body'>
-        <h3><%=comic.title%></h3>
-        <p>Genre: <%=comic.genre%> -- Author: <%=comic.artist%></p>
-      </div>
+      <div class="product">
+        <%= cl_image_tag comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
+        <div class='product-body'>
+          <h3><%=comic.title%></h3>
+          <p>Genre: <%=comic.genre%> -- Author: <%=comic.artist%></p>
+        </div>
       <ul class="list-inline product-controls product-controls-hidden hidden-sm hidden-xs">
         <li><%= link_to  edit_comic_path(comic) do  %>
           <i class="fa fa-pencil"></i><%end%></li>
-          <li><%= link_to comic_path(comic),
-            method: :delete,
-            data: { confirm: "Une bédé de Bachibouzouk?" } do%>
-            <i class="fa fa-trash-o"></i><%end%></li>
+        <li><%= link_to comic_path(comic),
+          method: :delete,
+          data: { confirm: "Une bédé de Bachibouzouk?" } do%>
+          <i class="fa fa-trash-o"></i><%end%>
+          </li>
           </ul>
+      </div>
+        <%end%>
+  </div>
+      <div class="tab-content hidden" id="Myborrowings">
+        <% @current_user.bookings.each  do  |booking|%>
+          <div class="product">
+            <%= cl_image_tag booking.comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
+              <div class='product-body'>
+                <h3><%=booking.comic.title%></h3>
+                <p><%= "booking starts at : " + booking.start_time.strftime('%d/%m/%Y %H:%m') + " and stops at: " + booking.end_time.strftime('%d/%m/%Y %H:%m') %></p>
+
+              <div>
+                <% if booking.order != nil%>
+                  <% if booking.order.payed? %>
+                    <p class=" validate"> Status: confirmed by owner</p>
+                    <p class=" validate">Go and grab it at  <%= booking.comic.user.profil.address%></p>
+                  <% else %>
+                    <p class=" pending"> Status: waiting for confirmation</p>
+                  <%end%>
+                <%end%>
+              </div>
+          </div>
         </div>
+      <%end%>
+    </div>
+
+        <div class="tab-content hidden" id="Mylendings">
+          <% @current_user.comics.each  do  |comic|%>
+            <% if comic.bookings != nil%>
+              <% comic.bookings.each do |booking|%>
+
+                <div class="product">
+                  <%= cl_image_tag booking.comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
+
+                    <div class='product-body'>
+                      <h3><%=booking.comic.title%></h3>
+                      <p><%= "booking starts at : " + booking.start_time.strftime('%d/%m/%Y %H:%m') + " and stops at: " + booking.end_time.strftime('%d/%m/%Y %H:%m') %></p>
+
+                      <% if booking.order != nil%>
+                        <% if booking.order.payed? %>
+                          <p class="validate"> Status:  already confirmed</p>
+                          <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        <% else %>
+                          <p class="pending"> Status: waiting for your  confirmation</p>
+                          <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                          <%= link_to 'Click Here', confirm_comic_booking_path(booking.comic, booking), method: :patch %>
+                        <%end%>
+                      <%end%>
+                    </div>
+                </div>
+              <%end%>
+          <%end%>
         <%end%>
       </div>
-      <div class="tab-content hidden" id="Myborrowings">
-       <% @current_user.bookings.each  do  |booking|%>
-       <div class="product">
-        <%= cl_image_tag booking.comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
-        <div class='product-body'>
-          <h3><%=booking.comic.title%></h3>
-          <p><%= "booking starts at : " + booking.start_time.strftime('%d/%m/%Y %H:%m') + " and stops at: " + booking.end_time.strftime('%d/%m/%Y %H:%m') %></p>
-        </div>
-      </div>
-      <%end%>
-      <div class="tab-content hidden" id="Mylendings">
+  </div>
 
-      </div>
-       </div>
-       </div>
+
+
+
   <% content_for(:js) do %>
    <%= javascript_tag do %>
      $(function(){

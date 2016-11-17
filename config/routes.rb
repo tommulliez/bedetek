@@ -4,12 +4,15 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :comics do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create] do
+      member do
+        patch 'confirm'
+      end
+    end
   end
 
   resources :profils do
     resources :bookings, except: [:new]
-
   end
 
 
