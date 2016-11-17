@@ -52,9 +52,9 @@
 
    </div>
    <% if current_user.profil == nil %>
-   <%= link_to "Add a comic", new_profil_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
+   <%= link_to "Add a comic", new_profil_path, {class: "btn btn-primary btn-lg" }%>
    <% else %>
-   <%= link_to "Add a comic", new_comic_path, {class: "navbar-wagon-item navbar-wagon-button btn" }%>
+   <%= link_to "Add a comic", new_comic_path, {class: "btn btn-primary btn-lg" }%>
    <% end %>
    <% else %>
    <div>
