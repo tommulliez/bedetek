@@ -1,9 +1,12 @@
 module CarouselHelper
+
   def carousel_for(images)
     Carousel.new(self, images).html
   end
 
   class Carousel
+    include CloudinaryHelper
+
     def initialize(view, images)
       @view, @images = view, images
       @uid = SecureRandom.hex(6)
@@ -46,7 +49,16 @@ module CarouselHelper
         class: (is_active ? 'item active' : 'item'),
       }
 
-      content_tag(:div, image_tag(image, class: "img-responsive"), options)
+      content_tag(:div,
+        cl_image_tag(
+          image,
+          {
+            height: 500,
+            width: 400,
+            crop: :fill,
+            class: "img-responsive"
+          }
+          ), options)
     end
 
     def controls
