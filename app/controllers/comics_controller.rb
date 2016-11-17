@@ -4,6 +4,11 @@ class ComicsController < ApplicationController
 
   def index
     @comics = Comic.all
+    @profils = Profil.where.not(latitude: nil, longitude: nil)
+    @hash = Gmaps4rails.build_markers(@profils) do |profil, marker|
+      marker.lat profil.latitude
+      marker.lng profil.longitude
+    end
   end
 
   def show

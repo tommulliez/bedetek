@@ -1,5 +1,4 @@
 
-
 <div class='carde'>
   <div class='carde_left'>
     <% if @comic.photo?%>
@@ -7,7 +6,9 @@
     <%end%>
   </div>
   <div class='carde_right'>
+  <% content_for(:title) do %>
     <h2><%= @comic.title %></h2>
+    <% end %>
     <div class="edit-delete">
     <% if current_user %>
             <% if current_user.id == @comic.user_id %>
