@@ -7,15 +7,17 @@ class ComicsController < ApplicationController
     @profils = Profil.where.not(latitude: nil, longitude: nil)
     @profils_list = Profil.near(params[:location],30)
 
-    if @profils_list == []
+    if @profils_list.blank?
       @hash = Gmaps4rails.build_markers(@profils) do |profil, marker|
       marker.lat profil.latitude
       marker.lng profil.longitude
+      marker.infowindow render_to_string(partial: "/comics/map_box", locals: { profil: profil })
       end
     else
     @hash = Gmaps4rails.build_markers(@profils_list) do |profil, marker|
       marker.lat profil.latitude
       marker.lng profil.longitude
+      marker.infowindow render_to_string(partial: "/comics/map_box", locals: { profil: profil })
       end
     end
   end

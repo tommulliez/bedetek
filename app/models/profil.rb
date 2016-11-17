@@ -7,4 +7,8 @@ class Profil < ApplicationRecord
   # validates :country, presence: true
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
+
+  def full_address
+    self.address + ', ' + self.city
+  end
 end

@@ -10,9 +10,16 @@
             <%= f.input :first_name, label: 'First name?'%>
             <%= f.input :last_name, label: 'Last name?'%>
             <%= f.input :address, label: 'Address ?'%>
+            <%= f.input :city, label: 'City ?' %>
+            <%= f.input :country, as: :hidden %>
+
+
             <%= f.submit "Add it", class: "btn-yours2" %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
+  <%= content_for(:js) do %>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDGclXDAYV8T8_Il1rj00UmLmvmJy7-ubU"></script>
+<% end %>
