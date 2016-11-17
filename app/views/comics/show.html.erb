@@ -76,6 +76,23 @@
       </div>
       <div class='carde_right__review'>
         <p><%= @comic.description %></p>
+        <p> <%= @comic.price %> €/day</p>
+
+          <% content_for(:after_js) do %>
+            <%= javascript_tag do %>
+              $(document).ready(function() {
+              $("input[type=radio]").click(function(){
+                var start = $('#start_date').val();
+                var end = $('#end_date').val();
+                var diff = new Date(end - start);
+                var days = diff/1000/60/60/24;
+                var price_comic = $('#price').val();
+                var price_day = (days * price_comic)
+                });
+              });
+            <%end%>
+          <%end%>
+
       </div>
       <div class="booking-form">
         <% if current_user  %>
