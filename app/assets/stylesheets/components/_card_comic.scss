@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 body {
   background:#e2e2e2;
   width:98%;
   height:100vh;
-.card {
+.carde {
+  margin-bottom: 200px;
   width:800px;
   height:400px;
   background:transparent;
@@ -41,7 +41,7 @@ body {
     border-radius:0 10px 10px 0;
     -webkit-border-radius:0 10px 10px 0;
     -moz-border-radius:0 10px 10px 0;
-   h1 {
+   h2 {
     color:white;
     font-family: 'Montserrat', sans-serif;
     font-weight:400;
@@ -144,22 +144,27 @@ body {
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
       }
-      a:hover {
-            color: #000000;
-  background-color: #ffda00;
-        background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/343086/rFQ5dHA.png);
-          background-size:12px 12px;
-        background-repeat:no-repeat;
-            background-position: 10% 50%;
-  cursor: pointer;
-  -webkit-transition-property: all;
-          transition-property: all;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
-      }
         padding:0 0 0 40px;
         margin:30px 0 0 0;
     }
 }
 }
 }
+.booking-form {
+  // margin-left: 40px;
+  // padding-top: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 370px;
+}
+
+.edit-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.element {
+  color: white;
+}
+

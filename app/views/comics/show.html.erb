@@ -1,44 +1,95 @@
-<% content_for(:title) do %>
-<%= @comic.title %>
-<% end %>
 
 
-<div class="wrapper ">
-  <div class="container " >
-    <div class="row ">
-      <div class="col-xs-12 col-sm-12 col-md-6">
-        <% if @comic.photo?%>
-        <%= image_tag @comic.photo.url(:standard), class: "img" %>
-        <%end%>
-      </div>
-
-
-      <div class="col-xs-12 col-sm-12 col-md-6">
-        <h1> <%= @comic.title %> </h1>
-          <% if current_user %>
+<div class='carde'>
+  <div class='carde_left'>
+    <% if @comic.photo?%>
+    <%= image_tag @comic.photo.url(:standard), class: "img" %>
+    <%end%>
+  </div>
+  <div class='carde_right'>
+    <h2><%= @comic.title %></h2>
+    <div class="edit-delete">
+    <% if current_user %>
             <% if current_user.id == @comic.user_id %>
               <h2 class="adaptation"> <%= link_to comic_path(@comic),
-                  method: :delete,
-                  data: { confirm: "Une bédé de Bachibouzouk?" } do %>
-                  <i class="fa fa-trash-o"></i>
+                method: :delete,
+                data: { confirm: "Une bédé de Bachibouzouk?" } do %></h2>
+                <i class="fa fa-trash-o element"></i>
                 <%end%>
                 <%= link_to  edit_comic_path(@comic) do  %>
-                  <i class="fa fa-pencil"></i>
+                  <i class="fa fa-pencil element"></i>
                 <%end%>
               <%end%>
             <%end%>
-          </h2>
+          </div>
+    <div class='carde_right__details'>
+      <ul>
+      <li><%= @comic.year %></li>
+        <li><%= @comic.genre %></li>
+      </ul>
+      <div class='carde_right__rating'>
+        <div class='carde_right__rating__stars'>
+          <fieldset class='rating'>
+            <input id='star10' name='rating' type='radio' value='10'>
+            <label class='full' for='star10' title='10 stars'></label>
+            <input id='star9half' name='rating' type='radio' value='9 and a half'>
+            <label class='half' for='star9half' title='9.5 stars'></label>
+            <input id='star9' name='rating' type='radio' value='9'>
+            <label class='full' for='star9' title='9 stars'></label>
+            <input id='star8half' name='rating' type='radio' value='8 and a half'>
+            <label class='half' for='star8half' title='8.5 stars'></label>
+            <input id='star8' name='rating' type='radio' value='8'>
+            <label class='full' for='star8' title='8 stars'></label>
+            <input id='star7half' name='rating' type='radio' value='7 and a half'>
+            <label class='half' for='star7half' title='7.5 stars'></label>
+            <input id='star7' name='rating' type='radio' value='7'>
+            <label class='full' for='star7' title='7 stars'></label>
+            <input id='star6half' name='rating' type='radio' value='6 and a half'>
+            <label class='half' for='star6half' title='6.5 stars'></label>
+            <input id='star6' name='rating' type='radio' value='6'>
+            <label class='full' for='star6' title='6 star'></label>
+            <input id='star5half' name='rating' type='radio' value='5 and a half'>
+            <label class='half' for='star5half' title='5.5 stars'></label>
+            <input id='star5' name='rating' type='radio' value='5'>
+            <label class='full' for='star5' title='5 stars'></label>
+            <input id='star4half' name='rating' type='radio' value='4 and a half'>
+            <label class='half' for='star4half' title='4.5 stars'></label>
+            <input id='star4' name='rating' type='radio' value='4'>
+            <label class='full' for='star4' title='4 stars'></label>
+            <input id='star3half' name='rating' type='radio' value='3 and a half'>
+            <label class='half' for='star3half' title='3.5 stars'></label>
+            <input id='star3' name='rating' type='radio' value='3'>
+            <label class='full' for='star3' title='3 stars'></label>
+            <input id='star2half' name='rating' type='radio' value='2 and a half'>
+            <label class='half' for='star2half' title='2.5 stars'></label>
+            <input id='star2' name='rating' type='radio' value='2'>
+            <label class='full' for='star2' title='2 stars'></label>
+            <input id='star1half' name='rating' type='radio' value='1 and a half'>
+            <label class='half' for='star1half' title='1.5 stars'></label>
+            <input id='star1' name='rating' type='radio' value='1'>
+            <label class='full' for='star1' title='1 star'></label>
+            <input id='starhalf' name='rating' type='radio' value='half'>
+            <label class='half' for='starhalf' title='0.5 stars'></label>
+          </fieldset>
+        </div>
+      </div>
+      <div class='carde_right__review'>
+        <p><%= @comic.description %></p>
+      </div>
+      <div class="booking-form">
+        <% if current_user  %>
+          <% if current_user.id != @comic.user_id %>
 
-        <h3>Synopsis</h3>
-        <p> <%= @comic.description %> </p>
-          <% if current_user  %>
-            <% if current_user.id != @comic.user_id %>
-              <%= render '/bookings/form'%>
-            <%end%>
+          <%= render '/bookings/form'%>
+
           <%end%>
-
+            <%end%>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
 
