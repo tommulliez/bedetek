@@ -1,0 +1,15 @@
+<div class="product">
+      <%= cl_image_tag comic.photo, :radius=>12, :width=>140, :height=> 140, :crop=>"fill" %>
+      <div class='product-body'>
+        <h3><%=comic.title%></h3>
+        <p>Genre: <%=comic.genre%> -- Author: <%=comic.artist%></p>
+      </div>
+      <ul class="list-inline product-controls product-controls-hidden hidden-sm hidden-xs">
+        <li><%= link_to  edit_comic_path(comic) do  %>
+          <i class="fa fa-pencil"></i><%end%></li>
+          <li><%= link_to comic_path(comic),
+            method: :delete,
+            data: { confirm: "Une bédé de Bachibouzouk?" } do%>
+            <i class="fa fa-trash-o"></i><%end%></li>
+          </ul>
+        </div>

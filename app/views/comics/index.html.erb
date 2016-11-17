@@ -1,17 +1,30 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
+      <div class="scroll">
       <ul>
-          <% if @profils_list == [] %>
-            <%= "Display image" %>
-          <% end %>
-          <% @profils_list.each do |profil| %>
-            <% profil.user.comics.each do |comic| %>
-            <li><%= comic.title%></li>
+        <% if @profils_list == [] %>
+        <%= "Display image" %>
+        <% end %>
+
+        <% @profils_list.each do |profil| %>
+          <% profil.user.comics.each do |comic| %>
+            <%= link_to comic do%>
+            <div class="card-map">
+              <%= cl_image_tag comic.photo, :width=>140, :height=> 200, :crop=>"fill" %>
+                <div class='content'>
+                  <h3><%=comic.title%></h3>
+                    <p>Genre: <%=comic.genre%> -- Author: <%=comic.artist%></p>
+                    <p><%= comic.description %>
+                </div>
+            </div>
             <%end%>
           <%end%>
+        <%end%>
+
 
       </ul>
+      </div>
     </div>
     <div class="col-sm-6">
       <div id="map" style="width: 600px; height: 700px;"></div>
