@@ -2,15 +2,14 @@
   <div class="row">
     <div class="col-sm-6">
       <ul>
-          <% if @profils_list == [] %>
-            <%= "Display image" %>
-          <% end %>
-          <% @profils_list.each do |profil| %>
-            <% profil.user.comics.each do |comic| %>
-            <li><%= comic.title%></li>
+            <% if @profils_list == [] %>
+              <%= "Display image" %>
+            <% end %>
+            <% @profils_list.each do |profil| %>
+              <% profil.user.comics.each do |comic| %>
+              <li><%= comic.title%></li>
+              <%end%>
             <%end%>
-          <%end%>
-
       </ul>
     </div>
     <div class="col-sm-6">
