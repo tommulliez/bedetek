@@ -24,6 +24,7 @@ class ComicsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @order = Order.new
   end
 
   def new
