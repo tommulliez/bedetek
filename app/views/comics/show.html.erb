@@ -1,12 +1,9 @@
-
-
 <div class="wrapper-show" style="background-image: url(<%= cl_image_path("wallpaper_lie9yz.jpg", :opacity=>26) %>);">
-
-<div class='carde'>
-  <div class='carde_left'>
-    <% if @comic.photo?%>
-    <%= image_tag @comic.photo.url(:standard), class: "img" %>
-    <%end%>
+  <div class='carde'>
+    <div class='carde_left'>
+      <% if @comic.photo?%>
+        <%= image_tag @comic.photo.url(:standard), class: "img" %>
+      <%end%>
   </div>
   <div class='carde_right'>
     <h2><%= @comic.title %></h2>

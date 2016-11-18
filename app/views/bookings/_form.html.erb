@@ -1,16 +1,11 @@
-
-
 <div>
   <%= form_for [@comic, @booking] do |f| %>
 
     <%= f.text_field :start_time, { :style=> 'width: 120px', :wrap => :soft}%>
     <%= f.text_field :end_time , { :style=> 'width: 120px', :wrap => :soft}%>
-    <%= f.submit "Book it now", class: "button" %>
-  <% end %>
-  </div>
 
 
-    <button type="button" class="button" data-toggle="modal" data-target="#myModal">Book it now</button>
+  <button type="button" class="button" data-toggle="modal" data-target="#myModal">Book it now</button>
 
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -31,11 +26,8 @@
           </div>
         </div>
       </div>
-    </div>
-
-
-
   </div>
+</div>
 
 
 <%= content_for(:js) do %>
