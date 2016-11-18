@@ -26,35 +26,51 @@
 
 <div class="wrapper wrapper-comic">
   <div class="container">
-    <h2 class="row text-amazing text-center"><strong>An endless selection</h2></strong>
+    <h2 class="row text-amazing text-center">
+      <strong>
+        Discover comics cloth to your favorites cities...
+      </strong></h2>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card-theme" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path 'lille.jpg' %>);">
+          <div class="card-description-theme">
+            <h2>Lille</h2>
+          </div>
+          <a href="/comics?location=lille" class="card-link"></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card-theme" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path 'paris.jpeg' %>);">
+          <div class="card-category-theme"></div>
+          <div class="card-description-theme">
+            <h2>Paris</h2>
+          </div>
+          <a href="/comics?location=Paris" class="card-link"></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card-theme" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path 'new_york.jpeg' %>);">
+          <div class="card-category-theme"></div>
+          <div class="card-description-theme">
+            <h2>New York</h2>
+          </div>
+          <a href="/comics?location=lille" class="card-link-theme"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <h2 class="row text-amazing text-center"><strong>...and an endless selection</h2></strong>
     <% @comics.each do |c| %>
     <div class="col-xs-12 col-sm-4 col-lg-3">
-
       <%= render "comic", comic: c %>
-
     </div>
     <% end %>
   </div>
-</div>
 
-<div class="container text-center padded">
-  <h2> <strong>Discover comics cloth to your favorites cities !</strong> </h2>
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div class="card-theme">
-        <%= image_tag "lille.jpg", class: "card-theme"%>
-      </div>
-      <div>
-        <a href="/comics?location=lille" class="card-description-theme">Lille</a>
-      </div>
-    <div class="col-xs-12 col-sm-4">
 
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
-  </div>
-</div>
 
 <div class="container text-center padded features">
       <div class="row">
@@ -66,6 +82,5 @@
           <%= carousel_for(a) %>
         </div>
     </div>
-
 </div>
 
