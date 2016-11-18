@@ -1,7 +1,7 @@
 class Comic < ApplicationRecord
   belongs_to :user
-  has_many :bookings
-  has_many :comic_reviews
+  has_many :bookings, dependent: :destroy
+  has_many :comic_reviews, dependent: :destroy
   validates :title, presence: true
   validates :editor, presence: true
   validates :artist, presence: true
