@@ -8,7 +8,7 @@ class ProfilsController < ApplicationController
     @profil = Profil.new(profil_params)
     @profil.user = current_user
     if @profil.save
-      redirect_to comics_path
+      redirect_to root_path
     else
       render :new
     end
