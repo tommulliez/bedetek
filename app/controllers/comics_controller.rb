@@ -58,7 +58,11 @@ class ComicsController < ApplicationController
 
   def destroy
     @comic.destroy
-    redirect_to comics_path
+     respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
+
   end
 
   private
