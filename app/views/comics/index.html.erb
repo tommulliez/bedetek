@@ -1,22 +1,27 @@
-<div class="container">
+
+<div>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-xs-12 col-sm-6">
       <div class="scroll">
+
+      <div class="text-comic">
+        <h2><strong>Make your pick!</strong></h2>
+      </div>
       <ul>
         <% if @profils_list == [] %>
         <h3>We are sorry but we didn't found comics cloth to you. No worries, we have millions of them. Check on the map!</h3>
         <%= image_tag "gaston.gif"%>
         <% end %>
 
+
         <% @profils_list.each do |profil| %>
           <% profil.user.comics.each do |comic| %>
             <%= link_to comic do%>
-            <div class="card-map">
-              <%= cl_image_tag comic.photo, :width=>140, :height=> 200, :crop=>"fill" %>
-                <div class='content'>
-                  <h3><%=comic.title%></h3>
-                    <p>Genre: <%=comic.genre%> -- Author: <%=comic.artist%></p>
-                    <p><%= comic.description %>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="card-map">
+                <%= link_to comic do%>
+                  <%= cl_image_tag comic.photo, :height=> 350, :crop=>"fill" %>
+                <%end%>
                 </div>
             </div>
             <%end%>
@@ -25,6 +30,7 @@
       </ul>
       </div>
     </div>
+
     <div class="col-sm-6">
       <div id="map" style="width: 600px; height: 700px;"></div>
         <% content_for(:js) do %>
