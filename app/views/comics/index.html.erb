@@ -4,7 +4,8 @@
       <div class="scroll">
       <ul>
         <% if @profils_list == [] %>
-        <%= "Display image" %>
+        <h3>We are sorry but we didn't found comics cloth to you. No worries, we have millions of them. Check on the map!</h3>
+        <%= image_tag "gaston.gif"%>
         <% end %>
 
         <% @profils_list.each do |profil| %>
