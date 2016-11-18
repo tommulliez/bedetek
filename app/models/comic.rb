@@ -3,7 +3,6 @@ class Comic < ApplicationRecord
   has_many :bookings
   has_many :comic_reviews
   validates :title, presence: true
-  validates :editor, presence: true
   validates :artist, presence: true
   validates :price, presence: true
   # validates :photo, presence: true
