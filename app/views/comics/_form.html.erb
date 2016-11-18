@@ -15,7 +15,7 @@
           <%= f.input :price ,label: 'How much do you want (on a daily basis)'%>
           <%= f.input :genre ,label: 'What is the genre', collection: ["adventure", "aviation", "fantastic", "history", "science-fiction", "western", "thriller", "adult", "manga"]%>
           <%= f.input :state ,label: 'Is it in good shape?', collection: ["Like it was new", "Average used", "Almost a wreck"]%>
-          <%= f.text_area :description, { :style=> 'width: 400px;', :rows => 5, :maxlength => 250, :class=> 'text-center'} %>
+          <%= f.text_area :description, { :style=> 'width: 100%;', :rows => 5, :maxlength => 250, :class=> 'text-center'} %>
           <%= f.input :photo ,label: 'Jacquette time'%>
           <%= f.input :photo_cache, as: :hidden %>
           <%= f.submit "ADD IT", class: "btn-add-comics" %>
