@@ -37,7 +37,7 @@ class ComicsController < ApplicationController
 
 
     if @comic.save
-
+      flash[:notice] = "#{@comic.title} has been added to your library"
       redirect_to comic_path(@comic)
     else
       render :new
@@ -58,7 +58,11 @@ class ComicsController < ApplicationController
 
   def destroy
     @comic.destroy
-    redirect_to comics_path
+     respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
+
   end
 
   private

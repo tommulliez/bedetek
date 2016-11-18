@@ -47,6 +47,8 @@
 
 }
 
+
+
 .btn-yours2{
   color: #384259;
   background: transparent;
@@ -63,5 +65,22 @@
   color: white;
   transition: background 0s;
   background: $blue;
+}
 
+
+.btn-add-comics {
+  border: 1px solid $blue_bedetek;
+  color: $blue_bedetek;
+  border-radius: 50px;
+  margin-left:20px;
+  text-align: center;
+  line-height: 45px;
+  background-color: white;
+  width: 180px;
+  height: 45px;
+}
+
+.btn-add-comics:hover {
+  opacity: 1;
+  text-decoration: none;
 }

@@ -1,6 +1,6 @@
 <div class="navbar-wagon <%= "navbar-wagon-fixed" if (action_name == "home") %>">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+  <a href="/" class="footer-brand">
     <%= image_tag("logo_bedetek.png") %>
   </a>
 
@@ -8,8 +8,8 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+    <form action="/comics" class="navbar-wagon-search">
+      <input type="text" class="navbar-wagon-search-input" name="location" placeholder="City or address">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
@@ -22,12 +22,7 @@
     <!--     <a href="" class="navbar-wagon-item navbar-wagon-link">Team</a> -->
 
     <!-- Notification link-->
-    <a href="" class="navbar-wagon-item navbar-wagon-link">
-      <div class="badge-container">
-        <i class="fa fa-shopping-basket"></i>
-        <div class="badge badge-blue">0</div>
-      </div>
-    </a>
+
 
     <!-- Profile picture and dropdown -->
     <% if user_signed_in? %>
@@ -43,7 +38,7 @@
             <%= link_to "Profile", profil_path(current_user.profil)%>
             <%end%>
           </li>
-          <li><a href="#">Pending reservations</a></li>
+          <li><a href="/404.html">Pending reservations</a></li>
           <li>
            <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
          </li>
@@ -52,14 +47,13 @@
 
    </div>
    <% if current_user.profil == nil %>
-   <%= link_to "Add a comic", new_profil_path, {class: "btn btn-primary btn-lg" }%>
+   <%= link_to "ADD A COMIC", new_profil_path, {class: "btn-add-comics" }%>
    <% else %>
-   <%= link_to "Add a comic", new_comic_path, {class: "btn btn-primary btn-lg" }%>
+   <%= link_to "ADD A COMIC", new_comic_path, {class: "btn-add-comics" }%>
    <% end %>
    <% else %>
    <div>
-    <%= link_to "Connexion", user_session_path %>
-    <a href="../users/sign_up">Inscription</a>
+   <a href="../users/sign_in"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i></a>
   </div>
   <% end %>
 
@@ -68,14 +62,35 @@
 </div>
 
 <!-- Dropdown appearing on mobile only -->
+<% if user_signed_in? %>
+<% if current_user.profil == nil %>
+   <%= link_to "ADD A COMIC", new_profil_path, {class: "btn-add-comics" }%>
+   <% else %>
+   <%= link_to "ADD A COMIC", new_comic_path, {class: "btn-add-comics" }%>
+   <% end %>
 <div class="navbar-wagon-item hidden-md hidden-lg">
   <div class="dropdown">
     <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-      <li><a href="#">Some mobile link</a></li>
-      <li><a href="#">Other one</a></li>
-      <li><a href="#">Other one</a></li>
+      <li>
+        <% if current_user.profil == nil %>
+          <%= link_to "Profile", new_profil_path%>
+        <% else%>
+          <%= link_to "Profile", profil_path(current_user.profil)%>
+        <%end%>
+      </li>
+      <li>
+        <a href="#">Pending reservations</a></li>
+      <li>
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+      </li>
     </ul>
   </div>
 </div>
+
+<% else %>
+   <div>
+   <a href="../users/sign_in"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i></a>
+  </div>
+<% end %>
 </div>
