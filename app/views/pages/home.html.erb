@@ -82,6 +82,9 @@
 
 <div class="container text-center padded features">
       <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <%= image_tag "sattouf.png" %>
+        </div>
         <div class="col-xs-12 col-sm-4">
           <% a = [] %>
           <% @comics.each do |c| %>
@@ -89,10 +92,6 @@
           <% end %>
           <%= carousel_for(a) %>
         </div>
-         <div class="col-xs-12 col-sm-6">
-          <%= image_tag "sattouf.png" %>
-        </div>
-
     </div>
 </div>
 
