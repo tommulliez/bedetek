@@ -2,8 +2,8 @@
 
 <div>
   <%= form_for [@comic, @booking] do |f| %>
-    <%= f.text_field :start_time, { :style=> 'width: 120px', :wrap => :soft,}%>
-    <%= f.text_field :end_time , { :style=> 'width: 120px', :wrap => :soft,}%>
+    <%= f.text_field :start_time, { :style=> 'width: 120px', :wrap => :soft}%>
+    <%= f.text_field :end_time , { :style=> 'width: 120px', :wrap => :soft}%>
     <%= f.submit "Book it now", class: "button" %>
   <% end %>
   </div>
