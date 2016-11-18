@@ -62,7 +62,16 @@
 
   <div class="container">
     <h2 class="row text-amazing text-center"><strong>...and an endless selection</h2></strong>
+
+    <% a = [] %>
     <% @comics.each do |c| %>
+      <% if c.photo? %>
+      <% a << c %>
+      <% end %>
+    <% end %>
+
+    <% 12.times do %>
+    <% c = a.sample %>
     <div class="col-xs-12 col-sm-4 col-lg-3">
       <%= render "comic", comic: c %>
     </div>
@@ -80,6 +89,10 @@
           <% end %>
           <%= carousel_for(a) %>
         </div>
+         <div class="col-xs-12 col-sm-6">
+          <%= image_tag "sattouf.png" %>
+        </div>
+
     </div>
 </div>
 
