@@ -1,3 +1,4 @@
+
 class BookingsController < ApplicationController
   before_action :set_booking, only: [ :show, :edit, :update, :destroy, :confirm ]
 
@@ -26,6 +27,7 @@ class BookingsController < ApplicationController
 
 
       # fin de la tentative
+      flash[:notice] = "#{@comic.title} has been booked, a notification has been sent to the owner"
       redirect_to profil_path(current_user)
     else
       render :new

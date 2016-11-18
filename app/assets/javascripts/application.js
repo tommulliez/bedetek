@@ -16,10 +16,7 @@
 //= require moment
 //= require moment/fr
 //= require bootstrap-datetimepicker
-//= require turbolinks
-//= require_tree .
-
-// app/assets/javascripts/application.js
-
+// require turbolinks
 //= require underscore
 //= require gmaps/google
+//= require_tree .
